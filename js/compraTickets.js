@@ -6,15 +6,13 @@ const btnRedireccion3 = document.getElementById("principalOradores");
 const btnRedireccion4 = document.getElementById("principalLugarFecha");
 const btnRedireccion5 = document.getElementById("principalSerOrador");
 const btnFinCompra = document.getElementById("compraFinalizada");
-
-
 // calculo de precio de tickets
 function calculoPago() {
     var descuentoAplicado = document.getElementById("descuentoAplicado").value;
     var cantTickets = document.getElementById("cantTickets").value;
     if (descuentoAplicado === "Sin descuento") {
         pagoFinal = cantTickets * 200
-        document.getElementById("pagoTotal").innerHTML = cantTickets * 200
+        document.getElementById("pagoTotal").innerHTML = pagoFinal
     };
     if (descuentoAplicado === "Estudiante") {
         pagoFinal = cantTickets * (200 - (200 * 0.8))
@@ -29,25 +27,34 @@ function calculoPago() {
         document.getElementById("pagoTotal").innerHTML = pagoFinal
     };
 };
-
-function redireccionamientoPrincipal(){
+function redireccionamientoPrincipal() {
     window.location = "../index.html";
-}
-
-function redireccionamientoOradores(){
+};
+function redireccionamientoOradores() {
     window.location = "../index.html#oradores";
-}
-function redireccionamientoLugarFecha(){
+};
+function redireccionamientoLugarFecha() {
     window.location = "../index.html#honolulu";
-}
-function redireccionamientoSerOrador(){
+};
+function redireccionamientoSerOrador() {
     window.location = "../index.html#formulario";
-}
-
-function finCompra(){
-    alert("¡Gracias por tu compra!\nTe enviaremos toda la información al mail ingresado")
-    location.reload()
-}
+};
+function emailValido(emailX) {
+    console.log(validacionMail.test(emailX));
+};
+function finCompra() {
+    if ( //todas las condiciones se cumplen
+        (!document.getElementById("nombre").value == "") &&
+        (!document.getElementById("apellido").value == "") &&
+        (!document.getElementById("email").value == "") &&
+        (!document.getElementById("cantTickets").value == "")
+    ) {
+        alert("¡Gracias por tu compra!\nTe enviaremos toda la información al mail ingresado");
+    }
+    else {
+        alert("Por favor, complete todos los campos");
+    }
+};
 
 // llamadas a funciones
 btnClickPrecio.addEventListener("click", calculoPago);

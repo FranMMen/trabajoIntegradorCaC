@@ -191,13 +191,13 @@
         <div class="form-group mx-5 mb-2">
             <div class="row mb-3">
                 <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input id="nombre" type="text" class="form-control" placeholder="Nombre" aria-required="true" required>
                 </div>
                 <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Apellido">
+                    <input id="apellido" type="text" class="form-control" placeholder="Apellido" aria-required="true" required>
                 </div>
             </div>
-            <textarea class="form-control fs-5" placeholder="¿Sobre qué quieres hablar?" rows="5"></textarea>
+            <textarea id="charla" class="form-control fs-5" placeholder="¿Sobre qué quieres hablar?" rows="5" aria-required="true" required></textarea>
             <small class="form-text text-muted">Recuerde incluir un título para su charla.</small>
             <div class="d-grid">
                 <button id="envioForm" class="btn mt-3 mb-2 text-white" type="submit"

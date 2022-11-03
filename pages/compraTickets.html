@@ -91,27 +91,27 @@
             <div class="row mb-3">
                 <!-- NOMBRE -->
                 <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input id="nombre" type="text" class="form-control" placeholder="Nombre" aria-required="true" required>
                 </div>
                 <!-- APELLIDO -->
                 <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Apellido">
+                    <input id="apellido" type="text" class="form-control" placeholder="Apellido" aria-required="true" required>
                 </div>
                 <!-- MAIL -->
                 <div class="col-12 my-3">
-                    <input type="email" class="form-control" placeholder="Mail">
+                    <input id="email" type="email" class="form-control" placeholder="Mail" aria-required="true" required>
                 </div>
                 <!-- CANTIDAD DE TICKETS -->
                 <div class="col-6">
                     <label class="form-label">Cantidad</label>
-                    <input id="cantTickets" type="number" class="form-control col-12">
+                    <input id="cantTickets" type="number" class="form-control col-12" aria-required="true" required>
                 </div>
                 <!-- CATEGORIA DE DESCUENTO -->
                 <div class="col-6">
                     <label class="form-label">Categoría</label>
                     <div class="input-group mb-3">
                         <select id="descuentoAplicado" class="form-select">
-                            <option selected value="0">Sin descuento</option>
+                            <option selected>Sin descuento</option>
                             <option>Estudiante</option>
                             <option>Trainee</option>
                             <option>Junior</option>

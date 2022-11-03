@@ -4,11 +4,20 @@ const btnEnvio = document.getElementById("envioForm");
 
 function redireccionamiento(){
     window.location = "pages/compraTickets.html";
-}
+};
 
 function envioFormulario(){
-    alert("¡Gracias por tu ofrecimiento!\nSin duda te tendremos en cuenta para nuestra próxima conferencia")
-}
+    if ( //todas las condiciones se cumplen
+    (!document.getElementById("nombre").value == "") &&
+    (!document.getElementById("apellido").value == "") &&
+    (!document.getElementById("charla").value == "")
+    ) {
+        alert("¡Gracias por tu ofrecimiento!\nSin duda te tendremos en cuenta para nuestra próxima conferencia");
+    }
+    else {
+        alert("Por favor, complete todos los campos");
+    }
+};
 
 btnRedireccion1.addEventListener("click", redireccionamiento);
 btnRedireccion2.addEventListener("click", redireccionamiento);
