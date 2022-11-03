@@ -1,4 +1,4 @@
-// definicion de botones
+// definicion de constantes
 const btnClickPrecio = document.getElementById("calculoPrecio");
 const btnRedireccion1 = document.getElementById("paginaPrincipal1");
 const btnRedireccion2 = document.getElementById("paginaPrincipal2");
@@ -6,7 +6,8 @@ const btnRedireccion3 = document.getElementById("principalOradores");
 const btnRedireccion4 = document.getElementById("principalLugarFecha");
 const btnRedireccion5 = document.getElementById("principalSerOrador");
 const btnFinCompra = document.getElementById("compraFinalizada");
-// calculo de precio de tickets
+
+// funciones
 function calculoPago() {
     var descuentoAplicado = document.getElementById("descuentoAplicado").value;
     var cantTickets = document.getElementById("cantTickets").value;
@@ -39,9 +40,6 @@ function redireccionamientoLugarFecha() {
 function redireccionamientoSerOrador() {
     window.location = "../index.html#formulario";
 };
-function emailValido(emailX) {
-    console.log(validacionMail.test(emailX));
-};
 function finCompra() {
     if ( //todas las condiciones se cumplen
         (!document.getElementById("nombre").value == "") &&
@@ -56,7 +54,7 @@ function finCompra() {
     }
 };
 
-// llamadas a funciones
+// eventos en botones
 btnClickPrecio.addEventListener("click", calculoPago);
 btnRedireccion1.addEventListener("click", redireccionamientoPrincipal);
 btnRedireccion2.addEventListener("click", redireccionamientoPrincipal);

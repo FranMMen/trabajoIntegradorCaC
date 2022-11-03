@@ -1,11 +1,12 @@
+// definición de constantes
 const btnRedireccion1 = document.getElementById("compraTickets1");
 const btnRedireccion2 = document.getElementById("compraTickets2");
 const btnEnvio = document.getElementById("envioForm");
 
+// funciones
 function redireccionamiento(){
     window.location = "pages/compraTickets.html";
 };
-
 function envioFormulario(){
     if ( //todas las condiciones se cumplen
     (!document.getElementById("nombre").value == "") &&
@@ -19,6 +20,7 @@ function envioFormulario(){
     }
 };
 
+// eventos en botones
 btnRedireccion1.addEventListener("click", redireccionamiento);
 btnRedireccion2.addEventListener("click", redireccionamiento);
 btnEnvio.addEventListener("click", envioFormulario);
